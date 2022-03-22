@@ -15,7 +15,7 @@ export class DialogComponent implements OnInit {
   Object = Object;
   @Output() enviar : EventEmitter<number> = new EventEmitter<number>();
   cantidadProducto : any  = 0;
-  //enviar envia a info a componente externos
+  
 
   constructor(
     public dialogRef: MatDialogRef<DialogComponent>,

@@ -13,13 +13,9 @@ export class ProductosCardListComponent implements OnInit {
   @Input() 
   Supermercado :Imarket[] = [];
   Object = Object;
-  constructor(private dialog: MatDialog) {
-    console.log("ProductosCardListComponent ", this.Supermercado);
-    
-   } 
+  constructor(private dialog: MatDialog) {} 
 
   ngOnInit(): void {
-    
   }
 
   openDialog(x:number){
@@ -37,7 +33,6 @@ export class ProductosCardListComponent implements OnInit {
       title, type, description, price, rating
     };
     const dialogRef = this.dialog.open(DialogComponent, dialogConfig);
-
   }
 
 }

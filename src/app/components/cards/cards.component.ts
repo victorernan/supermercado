@@ -1,11 +1,7 @@
 import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { Imarket } from 'src/app/Models/imarket';
-import { DialogComponent } from '../dialog/dialog.component';
 import { MatDialog } from '@angular/material/dialog';
 import { ProductosService } from 'src/app/services/productos.service';
-import { map, Observable, throwIfEmpty } from 'rxjs';
-
-
 @Component({
   selector: 'app-cards',
   templateUrl: './cards.component.html',
@@ -33,15 +29,6 @@ export class CardsComponent implements OnInit {
     }
   };
 
-  //esta funcion seria necesaria para el output funcione
-  // pero en este caso se optiene la cantidad por 
-  //
-
-  // recibirCantidad(cantidad : number){
-  //   this.cantidadProductos = cantidad;
-  //   console.log(this.cantidadProductos);    
-  // }
-
   ngOnInit(): void {
 
     this.productos = this.http.getProductos().subscribe((data : Imarket[])=>{
@@ -53,9 +40,7 @@ export class CardsComponent implements OnInit {
       this.unsort( this.frutas$);
       this.unsort( this.other$);
     });
- 
   }
-
 
   unsort(x: any){
     x.sort(function() {

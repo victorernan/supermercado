@@ -15,7 +15,6 @@ import { MatIconModule } from '@angular/material/icon';
 //components
 import { ProductosService } from './services/productos.service';
 import { ProductosCardListComponent } from './components/productos-card-list/productos-card-list.component';
-import { HomeComponent } from './components/home/home.component';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { AppComponent } from './app.component';
 import { CardsComponent } from './components/cards/cards.component';
@@ -25,8 +24,7 @@ import { CardsComponent } from './components/cards/cards.component';
     AppComponent,
     CardsComponent,
     DialogComponent,
-    ProductosCardListComponent,
-    HomeComponent
+    ProductosCardListComponent
   ],
   imports: [
     BrowserModule,
