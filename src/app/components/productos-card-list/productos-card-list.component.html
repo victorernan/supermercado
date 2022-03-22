@@ -1,0 +1,33 @@
+<div class="tarjetas">
+    <div class="datos" *ngFor="let key of Object.keys(Supermercado)">    
+        <mat-card>
+            <h3> {{Supermercado[key].title}} </h3>
+            <img [src]= Supermercado[key].filename width="120px" height="90px">
+            <star-rating [value]=Supermercado[key].rating
+                totalstars:string="5" 
+                checkedcolor="yellow" 
+                uncheckedcolor="grey" 
+                size="15px"  
+                readonly:booelan="false" >
+            </star-rating>
+            <h4> {{Supermercado[key].price}} € </h4>     
+            <mat-card-actions>
+                Product Rate: 
+                <star-rating [value]=Supermercado[key].rating 
+                            totalstars:string="5" 
+                            checkedcolor="yellow" 
+                            uncheckedcolor="grey" 
+                            size="15px" 
+                            readonly:booelan="false" >
+                </star-rating>
+
+                <button mat-button (click)="openDialog(Supermercado[key])"><mat-icon>visibility</mat-icon></button>
+                <button mat-button (click)="editProduct(Supermercado[key])"><mat-icon>edit</mat-icon>
+                </button>
+                
+            </mat-card-actions>   
+        </mat-card>
+    </div>
+    
+</div> 
+

@@ -1,0 +1,28 @@
+<mat-tab-group mat-align-tabs="center" animationDuration="0ms"  [backgroundColor]="'primary'" [color]="'warn'">
+<!--        -->
+    <mat-tab label="Frutas">
+        <app-productos-card-list [Supermercado]="frutas$">
+        </app-productos-card-list>
+    </mat-tab>
+    
+    <mat-tab label="Verduras">
+        <app-productos-card-list [Supermercado]="verduras$">
+        </app-productos-card-list>
+    </mat-tab>
+      
+    <mat-tab label="Otros">
+        <app-productos-card-list [Supermercado]="other$">
+        </app-productos-card-list>
+    </mat-tab>
+    
+</mat-tab-group>
+
+
+
+
+
+<!-- 
+<div (mouseenter)="changecolor=true" (mouseleave)="changecolor=false">
+    <div class="color" *ngIf="changecolor">show color</div>
+    <div class="no-color" *ngIf="!changecolor">Hide color</div>
+</div> -->
