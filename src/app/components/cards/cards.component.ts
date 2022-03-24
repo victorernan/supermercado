@@ -1,7 +1,7 @@
 import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { Imarket } from 'src/app/Models/imarket';
-import { MatDialog } from '@angular/material/dialog';
 import { ProductosService } from 'src/app/services/productos.service';
+
 @Component({
   selector: 'app-cards',
   templateUrl: './cards.component.html',
@@ -17,7 +17,7 @@ export class CardsComponent implements OnInit {
   @ViewChild('target')
   private targetElemment!: ElementRef;
 
-  constructor(public dialog: MatDialog, private http: ProductosService) {}
+  constructor(private http: ProductosService) {}
 
   @HostListener("window:scroll", ['$event']) onWindowScroll(){
     let posicion = document.documentElement.scrollTop;

@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RatingModule } from 'ng-starrating'
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
 
@@ -30,6 +30,7 @@ import { CardsComponent } from './components/cards/cards.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClient,
     HttpClientModule,
     MatCardModule,
     MatIconModule,

@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatDialogModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 import { ProductosCardListComponent } from './productos-card-list.component';
 
@@ -8,7 +9,12 @@ describe('ProductosCardListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProductosCardListComponent ]
+      declarations: [ ProductosCardListComponent ],
+      imports: [MatDialogModule],
+      providers : [
+        {provide: MatDialogRef, useValue: {}},
+        {provide : MAT_DIALOG_DATA, useValue : {}}
+      ]
     })
     .compileComponents();
   });
