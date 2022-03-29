@@ -59,13 +59,3 @@ produtoController.updateProduct = async (req, res) =>{
 }
 
 module.exports = produtoController;
-
-//estas funciones son instanciadas en el archivo que define las
-//rutas que van al servidor (rutas.js)
-//a su vez, index.js llama al archivo rutas
-
-//request params y request body
-// cuando requerimos solo un parametrp llamamos al  request params
-// por ejemplo getone, deleteone 
-// pero vamos a hacer un post o crear un nuevo campo
-// vamos a necesitar request body, porque en el cuerpo viene toda la info 
