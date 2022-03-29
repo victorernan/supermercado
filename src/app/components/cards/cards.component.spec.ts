@@ -1,6 +1,6 @@
 import { ComponentFixture, inject, TestBed } from '@angular/core/testing';
 import { CardsComponent } from './cards.component';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ProductosService } from 'src/app/services/productos.service';
 
 describe('componente principal', () => {
@@ -10,7 +10,10 @@ describe('componente principal', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ CardsComponent ], 
-      imports : [HttpClientTestingModule]
+      imports : [HttpClientTestingModule], 
+      providers: [
+        ProductosService
+      ]
     })
     .compileComponents();
   });
