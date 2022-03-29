@@ -1,3 +1,4 @@
+
 //las rutas que se van a usar para hacer las peticiones a la base de datos
 
 const { Router } = require("express");
@@ -14,5 +15,3 @@ routes.post('/', productoController.createProduct)
 routes.get('/:id', productoController.getOneProduct)
 routes.put('/:id', productoController.updateProduct)
 routes.delete('/:id', productoController.deleteProduct)
-
-module.exports = routes;

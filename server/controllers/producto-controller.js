@@ -1,3 +1,4 @@
+
 //consultas a la base de datos
 const mongoose = require('mongoose');
 const express = require('express');
@@ -68,4 +69,3 @@ module.exports = produtoController;
 // por ejemplo getone, deleteone 
 // pero vamos a hacer un post o crear un nuevo campo
 // vamos a necesitar request body, porque en el cuerpo viene toda la info 
-// y no en la url

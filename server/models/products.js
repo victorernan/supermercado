@@ -1,3 +1,4 @@
+
 //para definir los esquemas de datos
 const mongoose = require('mongoose');
 const {Schema} = mongoose;

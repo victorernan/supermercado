@@ -1,0 +1,17 @@
+<div class="datos" *ngFor="let key of Object.keys(productos)" >    
+    <mat-card >
+       <h3> {{productos[key].title}} </h3>
+       <img [src]= productos[key].filename width="120px" height="90px">
+       <p>{{productos[key].description}}</p>
+        <star-rating [value]=productos[key].rating
+            totalstars:string="5" 
+            checkedcolor="yellow" 
+            uncheckedcolor="grey" 
+            size="15px"  
+            readonly:booelan="false" >
+        </star-rating>
+        <h4> {{productos[key].price}} € </h4>     
+        <mat-card-actions>
+        </mat-card-actions>   
+    </mat-card>
+</div>
