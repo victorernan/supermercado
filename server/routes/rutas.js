@@ -15,3 +15,5 @@ routes.post('/', productoController.createProduct)
 routes.get('/:id', productoController.getOneProduct)
 routes.put('/:id', productoController.updateProduct)
 routes.delete('/:id', productoController.deleteProduct)
+
+module.exports = routes;
