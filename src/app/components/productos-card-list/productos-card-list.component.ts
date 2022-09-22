@@ -20,19 +20,20 @@ export class ProductosCardListComponent implements OnInit {
 
   openDialog(x:number){
     const dialogRef = this.dialog.open(DialogComponent, {
+      panelClass: [ ],
       width: '400px',
-      height: '400px',
+      height: '300px',
       data:{x}
     })
   }
 
-  editProduct({title, type, description, price, rating}:Imarket){
-
+  editProduct(x){
+    console.log(x);
     const dialogConfig = new MatDialogConfig();
     dialogConfig.data = {
-      title, type, description, price, rating
+      x
     };
-    const dialogRef = this.dialog.open(DialogComponent, dialogConfig);
+   // const dialogRef = this.dialog.open(DialogComponent, dialogConfig);
   }
 
 }

@@ -30,7 +30,6 @@ export class CardsComponent implements OnInit {
   };
 
   ngOnInit(): void {
-
     this.productos = this.http.getProductos().subscribe((data : Imarket[])=>{
       this.verduras$ = data.filter(x => x.type === 'vegetable');
       this.frutas$ = data.filter(x => x.type === 'fruit');
@@ -39,6 +38,7 @@ export class CardsComponent implements OnInit {
       this.unsort( this.verduras$);
       this.unsort( this.frutas$);
       this.unsort( this.other$);
+
     });
   }
 

@@ -1,6 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MatDialogModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { ProductosCardListComponent } from '../productos-card-list/productos-card-list.component';
 import { DialogComponent } from './dialog.component';
 
 describe('Testear DialogComponent', () => {

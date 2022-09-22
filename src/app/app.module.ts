@@ -11,14 +11,12 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
 
-
 //components
 import { ProductosService } from './services/productos.service';
 import { ProductosCardListComponent } from './components/productos-card-list/productos-card-list.component';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { AppComponent } from './app.component';
 import { CardsComponent } from './components/cards/cards.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +28,6 @@ import { CardsComponent } from './components/cards/cards.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClient,
     HttpClientModule,
     MatCardModule,
     MatIconModule,

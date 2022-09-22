@@ -4,14 +4,10 @@ const app = express();
 const morgan = require('morgan');
 const cors = require('cors');
 
-//exporto la conexion de la base de datos
 const {Mongoose} = require('./database');
-
 
 //settings
 app.set('port', process.env.PORT || 3000);
-//para hacer los despliegues puede los servicios usan su propio puerto 
-//a través de process.env.PORT se le indica que lo use
 
 
 //middlewares
